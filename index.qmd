@@ -1,0 +1,6 @@
+---
+title: "Exposure Triangle"
+format: html
+---
+
+{{< exposure-triangle >}}

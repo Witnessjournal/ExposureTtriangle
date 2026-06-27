@@ -12,6 +12,7 @@ support.js
 # Large self-contained bundle (regenerate from source when needed)
 *.html
 !index.html
+!static.html
 
 # Duplicated demo copy (canonical demo is index.html at repo root)
 exposure-embed-demo.html
@@ -30,3 +31,5 @@ node_modules/
 .claude
 
 /_site/*
+/.quarto/
+**/*.quarto_ipynb

@@ -111,6 +111,11 @@ Each maps directly onto the component attribute of the same name:
 The bundled photo is found relative to the script's own URL, so the default
 `scene` works wherever Quarto places the lib folder.
 
+
+## Demo
+
+Go to <http://soci.witnessjournal.com/ExposureTtriangle/>!
+
 ## Local preview
 
 Any static server works (the component fetches `scene.png`):
