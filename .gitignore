@@ -28,3 +28,5 @@ node_modules/
 *_old.*
 
 .claude
+
+/_site/*
