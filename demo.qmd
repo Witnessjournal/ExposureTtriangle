@@ -1,0 +1,45 @@
+---
+title: "The Exposure Triangle"
+subtitle: "A Quarto RevealJS extension"
+author: "Paolo Bosetti, Witness Journal"
+format:
+  revealjs:
+    theme: dark
+    width: 1280
+    height: 800
+---
+
+
+# Exposure Triangle
+
+## Full auto {.smaller}
+
+Drag a dial, or tap **AUTO** to hand it back to the camera.
+
+{{< exposure-triangle >}}
+
+## Custom accent + auto-spin
+
+{{< exposure-triangle accent="#2A6FDB" spin=true >}}
+
+## Aperture priority, no floor grid
+
+{{< exposure-triangle accent="#E0567A" floor-grid=false height="640px" >}}
+
+## How to embed
+
+```` markdown
+{{{< exposure-triangle >}}}
+
+{{{< exposure-triangle accent="#2A6FDB" spin=true >}}}
+
+{{{< exposure-triangle floor-grid=false scene="my-photo.png" height="640px" >}}}
+````
+
+All attributes from the README map to shortcode arguments:
+`accent`, `scene`, `floor-grid`, `spin`, `three-src`, plus `height` / `width`.
+
+
+# Author
+
+Paolo Bosetti, Witness Journal

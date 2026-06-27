@@ -1,0 +1,30 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Authoring scratch / build artifacts
+_standalone_src.dc.html
+support.js
+
+# Large self-contained bundle (regenerate from source when needed)
+*.html
+!index.html
+
+# Duplicated demo copy (canonical demo is index.html at repo root)
+exposure-embed-demo.html
+exposure-embed/
+
+# Node, if you ever add tooling
+node_modules/
+
+# Quarto products
+*_files/*
+/.luarc.json
+
+
+*_old.*
+
+.claude
