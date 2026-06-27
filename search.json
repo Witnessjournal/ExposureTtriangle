@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "demo.html#full-auto",
+    "href": "demo.html#full-auto",
+    "title": "The Exposure Triangle",
+    "section": "Full auto",
+    "text": "Full auto\nDrag a dial, or tap AUTO to hand it back to the camera."
+  },
+  {
+    "objectID": "demo.html#custom-accent-auto-spin",
+    "href": "demo.html#custom-accent-auto-spin",
+    "title": "The Exposure Triangle",
+    "section": "Custom accent + auto-spin",
+    "text": "Custom accent + auto-spin"
+  },
+  {
+    "objectID": "demo.html#aperture-priority-no-floor-grid",
+    "href": "demo.html#aperture-priority-no-floor-grid",
+    "title": "The Exposure Triangle",
+    "section": "Aperture priority, no floor grid",
+    "text": "Aperture priority, no floor grid"
+  },
+  {
+    "objectID": "demo.html#how-to-embed",
+    "href": "demo.html#how-to-embed",
+    "title": "The Exposure Triangle",
+    "section": "How to embed",
+    "text": "How to embed\n{{&lt; exposure-triangle &gt;}}\n\n{{&lt; exposure-triangle accent=\"#2A6FDB\" spin=true &gt;}}\n\n{{&lt; exposure-triangle floor-grid=false scene=\"my-photo.png\" height=\"640px\" &gt;}}\nAll attributes from the README map to shortcode arguments: accent, scene, floor-grid, spin, three-src, plus height / width."
+  }
+]
