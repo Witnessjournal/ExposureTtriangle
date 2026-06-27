@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Exposure Triangle",
+    "section": "",
+    "text": "This is an interactive simulation of the exposure triangle, which is a fundamental concept in photography that describes the relationship between aperture, shutter speed, and ISO. Adjusting one of these settings will affect the others, and understanding how they work together is key to achieving the desired exposure in your photos.\n\n\nSunny-16 Rule\nThe Sunny-16 Rule is a guideline for achieving proper exposure in bright sunlight. It states that on a sunny day, you can set your aperture to f/16 and your shutter speed to the reciprocal of your ISO setting. For example, if your ISO is 100, you would set your shutter speed to 1/100 seconds. The above simulation follows this rule.\nChanging the Lum. cursors changes the scene brightness. If the three parameters are in auto, the camera will adjust them to maintain the same exposure:\n\nAperture is kept at f/5.6, which is a common sweet-spot for most lenses, i.e. the setting that gives the sharpest results.\nShutter speed is maximized to freeze motion and avoiding camera shake.\nISO sensitivity is minimized to reduce noise in the image.\n\nIf one or more parameters are locked, the camera will adjust the others to maintain the same exposure.\n\n\n\n\n\n\nNote\n\n\n\nThe interactive model is a WebGL-based 3D representation that can be downloaded either as a JavaScript module or as a Quarto extension on GitHub."
+  },
+  {
     "objectID": "demo.html#full-auto",
     "href": "demo.html#full-auto",
     "title": "The Exposure Triangle",

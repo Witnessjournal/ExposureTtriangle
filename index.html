@@ -120,8 +120,14 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sunny-16-rule" id="toc-sunny-16-rule" class="nav-link active" data-scroll-target="#sunny-16-rule">Sunny-16 Rule</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -145,9 +151,34 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>This is an interactive simulation of the exposure triangle, which is a fundamental concept in photography that describes the relationship between aperture, shutter speed, and ISO. Adjusting one of these settings will affect the others, and understanding how they work together is key to achieving the desired exposure in your photos.</p>
 <exposure-triangle></exposure-triangle>
+<section id="sunny-16-rule" class="level3">
+<h3 class="anchored" data-anchor-id="sunny-16-rule">Sunny-16 Rule</h3>
+<p>The <em>Sunny-16 Rule</em> is a guideline for achieving proper exposure in bright sunlight. It states that on a sunny day, you can set your aperture to f/16 and your shutter speed to the reciprocal of your ISO setting. For example, if your ISO is 100, you would set your shutter speed to 1/100 seconds. The above simulation follows this rule.</p>
+<p>Changing the <em>Lum.</em> cursors changes the scene brightness. If the three parameters are in auto, the camera will adjust them to maintain the same exposure:</p>
+<ul>
+<li>Aperture is kept at f/5.6, which is a common sweet-spot for most lenses, i.e.&nbsp;the setting that gives the sharpest results.</li>
+<li>Shutter speed is maximized to freeze motion and avoiding camera shake.</li>
+<li>ISO sensitivity is minimized to reduce noise in the image.</li>
+</ul>
+<p>If one or more parameters are locked, the camera will adjust the others to maintain the same exposure.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The interactive model is a WebGL-based 3D representation that can be downloaded either as a JavaScript module or as a Quarto extension on <a href="https://github.com/WitnessJournal/ExposureTriangle">GitHub</a>.</p>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
