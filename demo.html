@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
+<link href="./images/Logo_nero.png" rel="icon" type="image/png">
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/tabby.min.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -99,7 +100,7 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-4df01d85d5cf19cc6202400f4f043f84.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-8a3bfafad6576065c16a71b5f4e0ecec.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -217,15 +218,15 @@ Paolo Bosetti, Witness Journal
 <section id="full-auto" class="slide level2 smaller">
 <h2>Full auto</h2>
 <p>Drag a dial, or tap <strong>AUTO</strong> to hand it back to the camera.</p>
-<exposure-triangle style="height:560px;"></exposure-triangle>
+<exposure-triangle></exposure-triangle>
 </section>
 <section id="custom-accent-auto-spin" class="slide level2">
 <h2>Custom accent + auto-spin</h2>
-<exposure-triangle accent="#2A6FDB" spin="" style="height:560px;"></exposure-triangle>
+<exposure-triangle accent="#2A6FDB" spin=""></exposure-triangle>
 </section>
 <section id="aperture-priority-no-floor-grid" class="slide level2">
 <h2>Aperture priority, no floor grid</h2>
-<exposure-triangle accent="#E0567A" floor-grid="false" style="height:640px;"></exposure-triangle>
+<exposure-triangle accent="#E0567A" floor-grid="false" height="640px" width="100%"></exposure-triangle>
 </section>
 <section id="how-to-embed" class="slide level2">
 <h2>How to embed</h2>
@@ -233,7 +234,7 @@ Paolo Bosetti, Witness Journal
 <span id="cb1-2"><a></a></span>
 <span id="cb1-3"><a></a>{{&lt; exposure-triangle accent="#2A6FDB" spin=true &gt;}}</span>
 <span id="cb1-4"><a></a></span>
-<span id="cb1-5"><a></a>{{&lt; exposure-triangle floor-grid=false scene="my-photo.png" height="640px" &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-5"><a></a>{{&lt; exposure-triangle floor-grid=false scene="my-photo.png" width="100%" height="640px" &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>All attributes from the README map to shortcode arguments: <code>accent</code>, <code>scene</code>, <code>floor-grid</code>, <code>spin</code>, <code>three-src</code>, plus <code>height</code> / <code>width</code>.</p>
 </section></section>
 <section id="author" class="title-slide slide level1 center">
@@ -244,6 +245,7 @@ Paolo Bosetti, Witness Journal
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="images/Logo_nero.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>

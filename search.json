@@ -25,6 +25,6 @@
     "href": "demo.html#how-to-embed",
     "title": "The Exposure Triangle",
     "section": "How to embed",
-    "text": "How to embed\n{{&lt; exposure-triangle &gt;}}\n\n{{&lt; exposure-triangle accent=\"#2A6FDB\" spin=true &gt;}}\n\n{{&lt; exposure-triangle floor-grid=false scene=\"my-photo.png\" height=\"640px\" &gt;}}\nAll attributes from the README map to shortcode arguments: accent, scene, floor-grid, spin, three-src, plus height / width."
+    "text": "How to embed\n{{&lt; exposure-triangle &gt;}}\n\n{{&lt; exposure-triangle accent=\"#2A6FDB\" spin=true &gt;}}\n\n{{&lt; exposure-triangle floor-grid=false scene=\"my-photo.png\" width=\"100%\" height=\"640px\" &gt;}}\nAll attributes from the README map to shortcode arguments: accent, scene, floor-grid, spin, three-src, plus height / width."
   }
 ]

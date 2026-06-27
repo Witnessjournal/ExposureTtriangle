@@ -9,10 +9,10 @@
  * USAGE (e.g. inside a Quarto raw-HTML block)
  * -------------------------------------------
  *   <script src="exposure-triangle.js"></script>
- *   <exposure-triangle style="height:560px"></exposure-triangle>
+ *   <exposure-triangle width="100%" height="560px"></exposure-triangle>
  *
  * Or mount programmatically into any element:
- *   ExposureTriangle.mount('#target', { accent:'#F5B544', height:'600px' });
+ *   ExposureTriangle.mount('#target', { accent:'#F5B544', width:'100%', height:'600px' });
  *
  * ATTRIBUTES / OPTIONS
  *   accent      CSS colour for dials + marker        (default #F5B544)
@@ -22,8 +22,10 @@
  *   floor-grid  "false" to hide the F–T floor grid    (default shown)
  *   spin        present/"true" to auto-rotate         (default off)
  *   three-src   override the Three.js script URL
+ *   height      CSS height of the widget box          (default 560px)
+ *   width       CSS width of the widget box           (default 100%)
  *
- * The element fits its own box — give it a height via CSS/attribute.
+ * The element fits its own box; height and width accept any CSS length.
  * It emits a "change" event ({iso,f,t,ev,mode}) whenever the state moves.
  * ===================================================================== */
 (function () {
@@ -63,6 +65,13 @@
     var link = document.createElement('link');
     link.id = 'et-fonts'; link.rel = 'stylesheet'; link.href = FONTS_HREF;
     document.head.appendChild(link);
+  }
+
+  function cssLength(value) {
+    if (value == null) return '';
+    value = String(value).trim();
+    if (!value) return '';
+    return /^-?\d+(\.\d+)?$/.test(value) ? value + 'px' : value;
   }
 
   var SHELL = '' +
@@ -112,7 +121,7 @@
     '</div>';
 
   class ExposureTriangle extends HTMLElement {
-    static get observedAttributes() { return ['accent', 'floor-grid', 'spin']; }
+    static get observedAttributes() { return ['accent', 'floor-grid', 'spin', 'height', 'width']; }
 
     // ---------------- ladders ----------------
     get LADDERS() {
@@ -244,6 +253,10 @@
 
     applyProps() {
       this._accent = this.getAttribute('accent') || '#F5B544';
+      var height = cssLength(this.getAttribute('height'));
+      var width = cssLength(this.getAttribute('width'));
+      if (height) this.style.height = height;
+      if (width) this.style.width = width;
       if (this.grid) this.grid.visible = this.getAttribute('floor-grid') !== 'false';
       this._spin = this.hasAttribute('spin') && this.getAttribute('spin') !== 'false';
     }
@@ -637,7 +650,8 @@
       if (opts.floorGrid === false) el.setAttribute('floor-grid', 'false');
       if (opts.spin) el.setAttribute('spin', '');
       if (opts.threeSrc) el.setAttribute('three-src', opts.threeSrc);
-      if (opts.height) el.style.height = opts.height;
+      if (opts.height) el.setAttribute('height', opts.height);
+      if (opts.width) el.setAttribute('width', opts.width);
       var host = typeof target === 'string' ? document.querySelector(target) : target;
       host.appendChild(el);
       return el;
