@@ -1,0 +1,22 @@
+color:
+  palette:
+    dark-grey: "#222222"
+    blue: "#ddeaf1"
+    red: "#7d0002"
+  background: white
+  foreground: dark-grey
+  primary: blue
+
+logo:
+  small: images/Logo_nero.png
+  medium: images/logo.png
+  large: images/Logo_nero.png
+
+typography:
+  fonts:
+    - family: DIN Condensed
+      source: google
+  base: Arial
+  headings: DIN Condensed
+  link:
+    color: red

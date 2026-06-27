@@ -39,7 +39,7 @@ photo that brightens, blurs, defocuses and grows noisy as you move through it.
 
 ```html
 <script src="exposure-triangle.js"></script>
-<exposure-triangle style="height:560px"></exposure-triangle>
+<exposure-triangle width="100%" height="560px"></exposure-triangle>
 ```
 
 Three.js is loaded automatically from a CDN; styles are isolated in shadow DOM.
@@ -53,11 +53,13 @@ Three.js is loaded automatically from a CDN; styles are isolated in shadow DOM.
 | `floor-grid` | shown | `"false"` to hide the F–T grid. |
 | `spin` | off | present to auto-rotate. |
 | `three-src` | CDN r128 | override the Three.js URL. |
+| `height` | `560px` | CSS height of the widget box. |
+| `width` | `100%` | CSS width of the widget box. |
 
 ### Programmatic mount
 
 ```js
-ExposureTriangle.mount('#target', { accent: '#2A6FDB', height: '600px' });
+ExposureTriangle.mount('#target', { accent: '#2A6FDB', width: '100%', height: '600px' });
 ```
 
 The element emits a `change` event with `{ iso, f, t, ev, mode }` whenever the
@@ -89,7 +91,7 @@ format: revealjs
 
 ## Customised
 
-{{< exposure-triangle accent="#2A6FDB" spin=true floor-grid=false height="640px" >}}
+{{< exposure-triangle accent="#2A6FDB" spin=true floor-grid=false width="100%" height="640px" >}}
 ````
 
 `quarto render demo.qmd` builds the included sample deck.
@@ -106,7 +108,7 @@ Each maps directly onto the component attribute of the same name:
 | `spin` | `false` | `true` to auto-rotate. |
 | `three-src` | CDN r128 | Override the Three.js URL. |
 | `height` | `560px` | CSS height of the widget box. |
-| `width` | full | CSS width of the widget box. |
+| `width` | `100%` | CSS width of the widget box. |
 
 The bundled photo is found relative to the script's own URL, so the default
 `scene` works wherever Quarto places the lib folder.

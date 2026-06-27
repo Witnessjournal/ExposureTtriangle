@@ -9,7 +9,7 @@
 
       {{< exposure-triangle >}}
 
-      {{< exposure-triangle accent="#2A6FDB" height="600px" spin=true >}}
+      {{< exposure-triangle accent="#2A6FDB" width="100%" height="600px" spin=true >}}
 
       {{< exposure-triangle floor-grid=false scene="my-photo.png" >}}
 
@@ -21,8 +21,8 @@
       spin         true   -> auto-rotate          (default off)
       three-src    override the Three.js URL
       height       CSS height of the widget box   (default 560px)
-      width        CSS width  of the widget box
-      style        extra inline CSS appended verbatim
+      width        CSS width  of the widget box    (default 100%)
+      style        extra inline CSS
       class        extra CSS class(es)
 --]]
 
@@ -77,7 +77,7 @@ local function exposure_triangle(args, kwargs, meta)
   local floorGrid = kw(kwargs, "floor-grid")
   local spin      = kw(kwargs, "spin")
   local threeSrc  = kw(kwargs, "three-src")
-  local height    = kw(kwargs, "height") or "560px"
+  local height    = kw(kwargs, "height")
   local width     = kw(kwargs, "width")
   local style     = kw(kwargs, "style")
   local class     = kw(kwargs, "class")
@@ -92,13 +92,11 @@ local function exposure_triangle(args, kwargs, meta)
   end
   if truthy(spin) or flags["spin"] then attrs[#attrs + 1] = "spin" end
   if threeSrc then attrs[#attrs + 1] = 'three-src="' .. esc(threeSrc) .. '"' end
+  if height then attrs[#attrs + 1] = 'height="' .. esc(height) .. '"' end
+  if width then attrs[#attrs + 1] = 'width="' .. esc(width) .. '"' end
   if class then attrs[#attrs + 1] = 'class="' .. esc(class) .. '"' end
 
-  -- Assemble inline style (box sizing).
-  local css = "height:" .. esc(height) .. ";"
-  if width then css = css .. "width:" .. esc(width) .. ";" end
-  if style then css = css .. esc(style) end
-  attrs[#attrs + 1] = 'style="' .. css .. '"'
+  if style then attrs[#attrs + 1] = 'style="' .. esc(style) .. '"' end
 
   local html = "<exposure-triangle " .. table.concat(attrs, " ") .. "></exposure-triangle>"
   return pandoc.RawBlock("html", html)

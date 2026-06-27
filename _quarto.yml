@@ -15,9 +15,8 @@ website:
 format:
   html:
     theme:
-      - cosmo
+      - wj.scss
       - brand
-    css: styles.css
     toc: true
 
 

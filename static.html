@@ -22,16 +22,17 @@
        <code>scene.png</code> sitting next to the script.</p>
 
     <pre>&lt;script src="exposure-triangle.js"&gt;&lt;/script&gt;
-&lt;exposure-triangle style="height:560px"&gt;&lt;/exposure-triangle&gt;</pre>
+&lt;exposure-triangle width="100%" height="560px"&gt;&lt;/exposure-triangle&gt;</pre>
 
     <!-- ===== the actual embed ===== -->
     <div class="embed">
-      <exposure-triangle style="height:560px"></exposure-triangle>
+      <exposure-triangle width="100%" height="560px"></exposure-triangle>
     </div>
 
     <p>Options are plain attributes: <code>accent</code>, <code>scene</code> (photo URL),
-       <code>floor-grid="false"</code>, <code>spin</code>. You can also mount from JS with
-       <code>ExposureTriangle.mount('#id', { accent:'#2A6FDB', height:'600px' })</code>, and listen for the
+       <code>floor-grid="false"</code>, <code>spin</code>, <code>width</code>, <code>height</code>.
+       You can also mount from JS with
+       <code>ExposureTriangle.mount('#id', { accent:'#2A6FDB', width:'100%', height:'600px' })</code>, and listen for the
        <code>change</code> event to read the resolved ISO / shutter / aperture.</p>
   </div>
 
